@@ -42,6 +42,7 @@ export const register = async (req, res) => {
 
 export const logout = async(req,res)=>{
     let cookie = req.cookies[process.env.COOKIE_NAME]
+  console.log("Logged out")
     if(!cookie){
         return res.status(400).json({message: "You are not logged in"})
     }
@@ -116,4 +117,5 @@ export const createAdmin = async (req, res) => {
     return res.status(500).json({ message: "Internal Server Error" });
   }
 };
+
 
