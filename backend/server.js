@@ -12,6 +12,7 @@ import carsRoute from './Routes/carsRoute.js'
 
 const allowedOrigins = [
   "https://cars-selling-website-frontend.vercel.app",
+  "https://cars-selling-website.vercel.app",
   "http://localhost:5173"
 ]
 
@@ -40,4 +41,5 @@ app.listen(8080,()=>{
     
 
 })
+
 
