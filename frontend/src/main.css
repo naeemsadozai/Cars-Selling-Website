@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+.rotate_transition {
+    animation: spining 1s linear infinite;
+}
+
+@keyframes spining {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
