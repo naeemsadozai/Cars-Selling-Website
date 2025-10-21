@@ -9,8 +9,23 @@ import authRoute from './Routes/authRoute.js'
 import cookieParser from 'cookie-parser';
 import carsRoute from './Routes/carsRoute.js'
 
+
+const allowedOrigins = [
+  "https://cars-selling-website-frontend.vercel.app",
+  "http://localhost:5173"
+]
+
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
@@ -25,3 +40,4 @@ app.listen(8080,()=>{
     
 
 })
+
