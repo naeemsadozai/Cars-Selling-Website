@@ -265,7 +265,7 @@ const Home = () => {
                     {isAdmin && (
                       <div className="w-11/12 mx-auto flex justify-end items-center">
                         <div className="buttons flex gap-2">
-                          <Link to={'/auth/edit'} className="bg-slate-100 text-slate-800 border border-slate-300 px-2 py-0.5 rounded-md update">
+                          <Link to={`/admin/edit/${car.id}`} className="bg-slate-100 text-slate-800 border border-slate-300 px-2 py-0.5 rounded-md update">
                             Edit <i className="fa-solid fa-gear"></i>
                           </Link>
                           <button
@@ -531,3 +531,4 @@ const Home = () => {
 };
 
 export default Home;
+
