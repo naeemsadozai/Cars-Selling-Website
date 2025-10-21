@@ -32,8 +32,8 @@ createRoot(document.getElementById('root')).render(
           <Route path='cars/brand/:name' element={<CarBrand></CarBrand>} ></Route>
           <Route path='cars/all' element={<AllCars/>} ></Route>
           <Route path='cars/:id' element={<SingleCar/>} ></Route>
-          <Route path='admin/createlisting' element={<AdminProtectedRoute> <CreateListing></CreateListing></AdminProtectedRoute>}></Route>
-          <Route path='admin/edit/:id' element={<AdminProtectedRoute> <Edit></Edit></AdminProtectedRoute>}></Route>
+          <Route path='admin/createlisting' element={<CreateListing></CreateListing>}></Route>
+          <Route path='admin/edit/:id' element={<Edit></Edit>}></Route>
         </Route>
         <Route path='/auth/login' element={<Login></Login>}></Route>
         <Route path='/auth/register' element={<Register/>}></Route>
