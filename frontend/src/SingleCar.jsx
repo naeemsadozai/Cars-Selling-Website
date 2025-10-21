@@ -38,6 +38,7 @@ const SingleCar = () => {
     }
 
     const fetchData = async(id)=>{
+        console.log("Req came);
       let singleCar = await axios.get(`https://cars-selling-website-backend.onrender.com/cars/${id}`,{withCredentials:true});
       setCarData(singleCar.data);
     }
@@ -193,5 +194,6 @@ useEffect(()=>{
         </div>
     )
 }
+
 
 export default SingleCar;
