@@ -26,7 +26,7 @@ const Register = () => {
       try {
         setLoader(true);
         window.scrollTo(0,0);
-        await axios.post("http://localhost:8080/auth/register",data,{withCredentials:true})
+        await axios.post("https://cars-selling-website-backend.onrender.com/auth/register",data,{withCredentials:true})
         navigate('/')
       } catch (error) {
         if(error.response){
@@ -50,7 +50,7 @@ const Register = () => {
     try {
       setLoader(true);
       window.scrollTo(0,0)
-      let response = await axios.post("http://localhost:8080/auth/register/checkUser",{email},{withCredentials:true})
+      let response = await axios.post("https://cars-selling-website-backend.onrender.com/auth/register/checkUser",{email},{withCredentials:true})
       if(response.status === 200){
         alert(response.data.message)
         setLoader(false)
@@ -143,3 +143,4 @@ const Register = () => {
 }
 
 export default Register;
+
