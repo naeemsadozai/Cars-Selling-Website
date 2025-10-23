@@ -8,7 +8,7 @@ function AdminProtectedRoute({ children }) {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        await axios.get("http://localhost:8080/auth/isAdmin", {
+        await axios.get("https://cars-selling-website-backend.onrender.com/auth/isAdmin", {
           withCredentials: true,
         });
         setAuth(true);
@@ -27,3 +27,4 @@ function AdminProtectedRoute({ children }) {
 }
 
 export default AdminProtectedRoute;
+
