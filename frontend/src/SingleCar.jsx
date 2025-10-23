@@ -18,7 +18,7 @@ const SingleCar = () => {
         try {
             setPurchase(true)
             window.scrollTo(0,0)
-            let response = await axios.post("http://localhost:8080/cars/purchase/confirmation",{name: carData.name,brand:carData.brand,price:carData.price},{withCredentials:true})
+            let response = await axios.post("https://cars-selling-website-backend.onrender.com/cars/purchase/confirmation",{name: carData.name,brand:carData.brand,price:carData.price},{withCredentials:true})
             alert(response.data.message)
             if(response){
                 setPurchase(false)
@@ -38,7 +38,7 @@ const SingleCar = () => {
     }
 
     const fetchData = async(id)=>{
-      let singleCar = await axios.get(`http://localhost:8080/cars/${id}`,{withCredentials:true});
+      let singleCar = await axios.get(`https://cars-selling-website-backend.onrender.com/cars/${id}`,{withCredentials:true});
       setCarData(singleCar.data);
     }
 useEffect(()=>{
@@ -193,5 +193,6 @@ useEffect(()=>{
         </div>
     )
 }
+
 
 export default SingleCar;
