@@ -24,7 +24,7 @@ const Edit = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/cars/edit/${id}`, { withCredentials: true })
+      const response = await axios.get(`https://cars-selling-website-backend.onrender.com/cars/edit/${id}`, { withCredentials: true })
       setData(response.data.newcar)
     } catch (error) {
       if (error.response) alert(error.response.data.message)
@@ -50,7 +50,7 @@ const Edit = () => {
     }
 
     try {
-      const response = await axios.put(`http://localhost:8080/cars/update/${id}`, formData, {
+      const response = await axios.put(`https://cars-selling-website-backend.onrender.com/cars/update/${id}`, formData, {
         withCredentials: true,
         headers: { 'Content-Type': 'multipart/form-data' }
       })
@@ -175,3 +175,4 @@ const Edit = () => {
 }
 
 export default Edit
+
