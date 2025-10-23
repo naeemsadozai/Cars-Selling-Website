@@ -67,7 +67,7 @@ const App = () => {
               <h1 className='font-bold my-3'>OR</h1>
               
               <div className='w-full flex'>
-                <Link to='http://localhost:8080/auth/google' className='cursor-pointer flex items-center justify-center w-full border h-10 rounded-4xl text-lg font-bold font bg-blue-600 text-white'><i className="fa-brands fa-google"></i> Login with Google</Link>
+                <Link to='https://cars-selling-website-backend.onrender.com/auth/google' className='cursor-pointer flex items-center justify-center w-full border h-10 rounded-4xl text-lg font-bold font bg-blue-600 text-white'><i className="fa-brands fa-google"></i> Login with Google</Link>
               </div> 
             </form>
             
@@ -85,4 +85,5 @@ const App = () => {
 }
 
 export default App;
+
 
