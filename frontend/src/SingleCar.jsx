@@ -13,7 +13,6 @@ const SingleCar = () => {
     let navigate = useNavigate()
     let [carData,setCarData] = useState({});
     let [purchase,setPurchase] = useState(false);
-    const [loader, setLoader] = useState(false);
 
     const handleConfirmation = async ()=>{
         try {
@@ -49,14 +48,6 @@ useEffect(()=>{
   fetchData(id)
 },[])
     return (
-        {loader && (
-        <div className="w-full h-[80vh] flex flex-col items-center justify-center">
-          <h1>Loading data please wait</h1>
-          <div className="w-20 h-20 border-t-1 mt-8 rounded-full rotate_transition"></div>
-        </div>
-      )}
-
-        {(!loader) && <div>
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
             {(purchase) && <div className='w-full h-[80vh]'>
                <div className='w-full h-full flex flex-col justify-center items-center'>
@@ -202,13 +193,12 @@ useEffect(()=>{
             }
 
         </div>
-        </div>
-        }
     )
 }
 
 
 export default SingleCar;
+
 
 
 
