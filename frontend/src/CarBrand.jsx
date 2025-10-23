@@ -27,7 +27,7 @@ const AllBrands = () => {
       try {
         setLoader(true);
         window.scrollTo(0,0);
-        let cars = await axios.get(`http://localhost:8080/cars/brand/${name}?page=${page}`,{withCredentials:true});
+        let cars = await axios.get(`https://cars-selling-website-backend.onrender.com/cars/brand/${name}?page=${page}`,{withCredentials:true});
         console.log(cars.data);
         setData(cars.data.newdata)      
         settotalpage(cars.data.totalpages)
@@ -151,3 +151,4 @@ const AllBrands = () => {
 }
 
 export default AllBrands
+
