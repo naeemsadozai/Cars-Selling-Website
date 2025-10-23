@@ -41,7 +41,7 @@ const CreateListing = () => {
         formdata.append('price',data.car_price);
         formdata.append('car_pic',data.car_pic);
         try {
-            let response = await axios.post('http://localhost:8080/cars/create',formdata,{withCredentials:true})
+            let response = await axios.post('https://cars-selling-website-backend.onrender.com/cars/create',formdata,{withCredentials:true})
             if(response.status === 200){
                 alert(response.data.message)
                 navigate('/admin/createlisting')
@@ -155,5 +155,6 @@ const CreateListing = () => {
     </main>
   )
 }
+
 
 export default CreateListing
