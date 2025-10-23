@@ -46,7 +46,6 @@ export const logout = async(req,res)=>{
         return res.status(400).json({message: "You are not logged in"})
     }
     res.clearCookie(process.env.COOKIE_NAME);
-  console.log("Cleared");
     return res.status(200).json({message: "Logged out successfully"})
 }
 
@@ -117,6 +116,7 @@ export const createAdmin = async (req, res) => {
     return res.status(500).json({ message: "Internal Server Error" });
   }
 };
+
 
 
 
