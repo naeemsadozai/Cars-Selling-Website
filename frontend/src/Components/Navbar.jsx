@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const logout = async () => {
   try {
-    let response = await axios.post("http://localhost:8080/auth/logout",{},{ withCredentials: true });
+    let response = await axios.post("https://cars-selling-website-backend.onrender.com/auth/logout",{},{ withCredentials: true });
     setIsLoggedin(false);
     setIsAdmin(false);
     window.location.reload()
@@ -23,7 +23,7 @@ const Navbar = () => {
   useEffect(()=>{
     let check = async()=>{
       try {
-        let response = await axios.get('http://localhost:8080/auth/isLoggedin',{withCredentials:true});
+        let response = await axios.get('https://cars-selling-website-backend.onrender.com/auth/isLoggedin',{withCredentials:true});
         if(response.data.isLoggedin){
           setIsLoggedin(true)
         }else{
@@ -147,5 +147,6 @@ const Navbar = () => {
     </nav>
   );
 };
+
 
 export default Navbar;
