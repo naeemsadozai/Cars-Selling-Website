@@ -23,7 +23,7 @@ const Navbar = () => {
   useEffect(()=>{
     let check = async()=>{
       try {
-        let response = await axios.get('https://cars-selling-website-backend.onrender.com/auth/isLoggedin',{},{withCredentials:true});
+        let response = await axios.get('https://cars-selling-website-backend.onrender.com/auth/isLoggedin',{withCredentials:true});
         console.log(response.data.isLoggedin)
         if(response.data.isLoggedin){
           setIsLoggedin(true)
@@ -151,4 +151,5 @@ const Navbar = () => {
 
 
 export default Navbar;
+
 
