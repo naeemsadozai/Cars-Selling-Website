@@ -16,7 +16,7 @@ const Home = () => {
     try {
       setLoader(true);
       window.scrollTo(0, 0);
-      let cars = await axios.get(`http://localhost:8080/cars/all?page=${page}`, {
+      let cars = await axios.get(`https://cars-selling-website-backend.onrender.com/cars/all?page=${page}`, {
         withCredentials: true,
       });
       if (cars.data.newdata.length > 9) {
@@ -103,7 +103,7 @@ const Home = () => {
       setLoader(true);
       window.scrollTo(0, 0);
       let deleted = await axios.delete(
-        `http://localhost:8080/cars/delete/${id}`,
+        `https://cars-selling-website-backend.onrender.com/cars/delete/${id}`,
         { withCredentials: true }
       );
       if (deleted.response === 201) {
@@ -531,3 +531,4 @@ const Home = () => {
 };
 
 export default Home;
+
