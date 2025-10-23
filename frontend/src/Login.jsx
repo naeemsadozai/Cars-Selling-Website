@@ -19,7 +19,7 @@ const App = () => {
   const handleSubmit = async (e)=>{
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/auth/login',data,{withCredentials:true})
+      await axios.post('https://cars-selling-website-backend.onrender.com/auth/login',data,{withCredentials:true})
       navigate('/')
     } catch (error) {
       if(error.response){
@@ -85,3 +85,4 @@ const App = () => {
 }
 
 export default App;
+
