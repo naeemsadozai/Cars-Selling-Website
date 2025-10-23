@@ -13,6 +13,7 @@ const SingleCar = () => {
     let navigate = useNavigate()
     let [carData,setCarData] = useState({});
     let [purchase,setPurchase] = useState(false);
+    const [loader, setLoader] = useState(false);
 
     const handleConfirmation = async ()=>{
         try {
@@ -38,14 +39,17 @@ const SingleCar = () => {
     }
 
     const fetchData = async(id)=>{
+        setLoader(true);
+        window.scrollTo(0, 0);
       let singleCar = await axios.get(`https://cars-selling-website-backend.onrender.com/cars/${id}`,{withCredentials:true});
       setCarData(singleCar.data);
+        setLoader(false);
     }
 useEffect(()=>{
   fetchData(id)
 },[])
     return (
-
+        {(!loader) &&
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
             {(purchase) && <div className='w-full h-[80vh]'>
                <div className='w-full h-full flex flex-col justify-center items-center'>
@@ -191,8 +195,10 @@ useEffect(()=>{
             }
 
         </div>
+        }
     )
 }
 
 
 export default SingleCar;
+
