@@ -49,7 +49,7 @@ useEffect(()=>{
   fetchData(id)
 },[])
     return (
-        {(!loader) &&
+        {(!loader) && <div>
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
             {(purchase) && <div className='w-full h-[80vh]'>
                <div className='w-full h-full flex flex-col justify-center items-center'>
@@ -195,10 +195,12 @@ useEffect(()=>{
             }
 
         </div>
+        </div>
         }
     )
 }
 
 
 export default SingleCar;
+
 
