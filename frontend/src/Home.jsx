@@ -152,7 +152,7 @@ const Home = () => {
       {!loader && (
         <div>
           {/* Hero Slider */}
-          <div className="relative w-full h-[20rem] sm:h-[30rem] lg:h-[40rem] overflow-hidden">
+          <div className="relative w-full h-[14rem] sm:h-[30rem] lg:h-[40rem] overflow-hidden">
             <div
               className="flex transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${currIndex * 100}%)` }}>
@@ -531,6 +531,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
