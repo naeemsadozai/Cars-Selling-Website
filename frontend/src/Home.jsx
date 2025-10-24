@@ -152,7 +152,7 @@ const Home = () => {
       {!loader && (
         <div>
           {/* Hero Slider */}
-          <div className="relative w-full h-[30rem] sm:h-[35rem] lg:h-[40rem] overflow-hidden">
+          <div className="relative w-full h-[35rem] sm:h-[35rem] lg:h-[40rem] overflow-hidden">
             <div
               className="flex transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${currIndex * 100}%)` }}>
@@ -201,7 +201,7 @@ const Home = () => {
           </div>
 
           {/* Cars Section */}
-          <div className="carsSection w-full bg-sky-50 py-12 sm:py-16">
+          <div className="carsSection w-full bg-sky-50 py-1 sm:py-16">
             <div className="w-11/12 mx-auto">
               <div className="allVehicles flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                 <h1 className="text-2xl sm:text-3xl font-semibold">
@@ -531,4 +531,5 @@ const Home = () => {
 };
 
 export default Home;
+
 
