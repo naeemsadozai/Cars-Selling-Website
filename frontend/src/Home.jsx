@@ -164,7 +164,7 @@ const Home = () => {
                     alt={image.name}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-1/3 sm:top-1/2 left-5 sm:left-20 md:left-32 lg:left-72 flex flex-col items-start">
+                  <div className="absolute top-1/2 sm:top-1/2 left-5 sm:left-20 md:left-32 lg:left-72 flex flex-col items-start">
                     <p className="text-white text-lg sm:text-xl md:text-2xl">
                       Price: ${image.price}
                     </p>
@@ -531,6 +531,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
