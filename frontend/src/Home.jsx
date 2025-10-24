@@ -164,11 +164,11 @@ const Home = () => {
                     alt={image.name}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-1/2 sm:top-1/2 left-5 sm:left-20 md:left-32 lg:left-72 flex flex-col items-start">
-                    <p className="text-white text-lg sm:text-xl md:text-2xl">
+                  <div className="absolute top-1/4 sm:top-1/2 left-5 sm:left-20 md:left-32 lg:left-72 flex flex-col items-start">
+                    <p className="text-white text-md sm:text-xl md:text-2xl">
                       Price: ${image.price}
                     </p>
-                    <h2 className="text-white text-3xl sm:text-4xl md:text-5xl my-4 sm:my-6">
+                    <h2 className="text-white text-2xl sm:text-4xl md:text-5xl my-4 sm:my-6">
                       {image.name}
                     </h2>
                     <div className="text-white flex flex-wrap gap-2 sm:gap-3 text-sm sm:text-md mt-3">
@@ -531,6 +531,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
