@@ -126,7 +126,10 @@ export const confirmationMail = async (req,res)=>{
         }
         
         let sent = await purchaseConfirmation(user.name,user.email, name, brand, price);
-        console.log(sent);
+        if (!sent) {
+          return res.status(500).json({ message: "Failed to send confirmation email" });
+        }
+
         return res.status(200).json({message: "Appointment Booked Successfully Please Check you Mail"})
     } catch (error) {
         return res.status(500).json({message: "Server Error Occured"})
@@ -188,4 +191,5 @@ export const updateCar = async (req, res) => {
     });
   }
 };
+
 
