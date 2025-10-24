@@ -65,6 +65,7 @@ const getScheduledDateTime = () => {
 };
 
 export const purchaseConfirmation = async (buyer ,email, carName, brand, price) => {   
+    console.log(buyer ,email, carName, brand, price);
     
     const meeting = getScheduledDateTime();
     const formattedPrice = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price);
@@ -125,4 +126,5 @@ export const purchaseConfirmation = async (buyer ,email, carName, brand, price) 
             </div>
         `
     });
+
 };
