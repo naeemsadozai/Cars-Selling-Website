@@ -65,7 +65,8 @@ const getScheduledDateTime = () => {
 };
 
 export const purchaseConfirmation = async (buyer ,email, carName, brand, price) => {   
-    const meeting = getScheduledDateTime();
+    try{
+        const meeting = getScheduledDateTime();
     const formattedPrice = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price);
 
     await transporter.sendMail({
@@ -124,6 +125,10 @@ export const purchaseConfirmation = async (buyer ,email, carName, brand, price) 
             </div>
         `
     });
-
+    return true;
+    }catch(error) {
+    return false;
+  }
 };
+
 
