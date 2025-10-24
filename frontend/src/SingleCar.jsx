@@ -10,6 +10,7 @@ const capitalize = (s) => s && s.charAt(0).toUpperCase() + s.slice(1);
 
 const SingleCar = () => {
     let { id } = useParams();
+    console.log(id);
     let navigate = useNavigate()
     let [carData,setCarData] = useState({});
     let [purchase,setPurchase] = useState(false);
@@ -41,6 +42,7 @@ const SingleCar = () => {
         setLoader(true);
         window.scrollTo(0, 0);
       let singleCar = await axios.get(`https://cars-selling-website-backend.onrender.com/cars/${id}`,{withCredentials:true});
+        console.log(singleCar);
       setCarData(singleCar.data);
         setLoader(false);
     }
@@ -198,6 +200,7 @@ useEffect(()=>{
 
 
 export default SingleCar;
+
 
 
 
