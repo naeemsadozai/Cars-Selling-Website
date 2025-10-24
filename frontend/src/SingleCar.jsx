@@ -10,10 +10,10 @@ const capitalize = (s) => s && s.charAt(0).toUpperCase() + s.slice(1);
 
 const SingleCar = () => {
     let { id } = useParams();
-    console.log(id);
     let navigate = useNavigate()
     let [carData,setCarData] = useState({});
     let [purchase,setPurchase] = useState(false);
+    let [loader,setLoader] = useState(false);
 
     const handleConfirmation = async ()=>{
         try {
@@ -51,6 +51,10 @@ useEffect(()=>{
 },[])
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
+            {(loader) && <div className = 'h-full w-full flex items-center justify-center'>
+                <h1>Loading...</h1>
+            </div>
+            {(!loader) && <div>
             {(purchase) && <div className='w-full h-[80vh]'>
                <div className='w-full h-full flex flex-col justify-center items-center'>
                 <h1>Please wait your request is being Processed</h1>
@@ -193,13 +197,14 @@ useEffect(()=>{
                 </div>
             </div>
             }
-
+        </div>}
         </div>
     )
 }
 
 
 export default SingleCar;
+
 
 
 
