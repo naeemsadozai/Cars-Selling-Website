@@ -20,7 +20,7 @@ const SingleCar = () => {
             setPurchase(true)
             window.scrollTo(0,0)
             let response = await axios.post("https://cars-selling-website-backend.onrender.com/cars/purchase/confirmation",{name: carData.name,brand:carData.brand,price:carData.price},{withCredentials:true})
-            console.log(response);
+        
             alert(response.data.message)
             if(response){
                 setPurchase(false)
@@ -205,6 +205,7 @@ useEffect(()=>{
 
 
 export default SingleCar;
+
 
 
 
