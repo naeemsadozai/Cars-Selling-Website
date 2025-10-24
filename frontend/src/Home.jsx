@@ -190,12 +190,12 @@ const Home = () => {
 
             <button
               onClick={handlePrevSlide}
-              className="absolute top-1/5 left-0 sm:top-1/2 sm:left-4 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 sm:p-3 rounded-full shadow text-xs sm:text-xl">
+              className="absolute top-1/3 left-0 sm:top-1/2 sm:left-4 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 sm:p-3 rounded-full shadow text-xs sm:text-xl">
               &lt;
             </button>
             <button
               onClick={handleNextSlide}
-              className="absolute top-1/5 right-0 sm:top-1/2 sm:right-4 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 sm:p-3 rounded-full shadow text-xs sm:text-xl">
+              className="absolute top-1/3 right-0 sm:top-1/2 sm:right-4 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 sm:p-3 rounded-full shadow text-xs sm:text-xl">
               &gt;
             </button>
           </div>
@@ -531,6 +531,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
