@@ -126,9 +126,12 @@ export const purchaseConfirmation = async (buyer ,email, carName, brand, price) 
         `
     });
     return true;
-    }catch(error) {
-    return false;
-  }
+    }catch (error) {
+      console.error("❌ Email sending failed:", error);
+      return false;
+    }
+
 };
+
 
 
